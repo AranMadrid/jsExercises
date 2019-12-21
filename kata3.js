@@ -12,9 +12,9 @@
       cartasJ2 = cartasJ2 + jugador2[i] + " ";
   }
 
-  if (ptosJ1["puntaje"] > ptosJ2["puntaje"]) {
+  if (ptosJ1["puntuacion"] > ptosJ2["Puntuacion"]) {
       console.log(cartasJ1 + "\n" + cartasJ2 + "\n" + "Jugador 1 gana, " + ptosJ1["mano"]);
-  } else if (ptosJ2["puntaje"] > ptosJ1["puntaje"]) {
+  } else if (ptosJ2["Puntuacion"] > ptosJ1["puntuacion"]) {
       console.log(cartasJ1 + "\n" + cartasJ2 + "\n" + "Jugador 2 gana, " + ptosJ2["mano"]);
   } else { //Puntuaciones iguales
 
@@ -53,7 +53,7 @@
           }
 
           if (existeEscaleraColor) {
-              obj["puntaje"] = 90;
+              obj["puntuacion"] = 90;
               obj["mano"] = "Escalera de color";
               return obj;
           }
@@ -72,7 +72,7 @@
       }
 
       if (ExistePoker) {
-          obj["puntaje"] = 80;
+          obj["puntuacion"] = 80;
           obj["mano"] = "Poker";
           return obj;
       }
@@ -90,7 +90,7 @@
       }
 
       if (ExisteFull) {
-          obj["puntaje"] = 70;
+          obj["puntuacion"] = 70;
           obj["mano"] = "Full";
           return obj;
       }
@@ -104,7 +104,7 @@
       }
 
       if (color) {
-          obj["puntaje"] = 60;
+          obj["puntuacion"] = 60;
           obj["mano"] = "Color";
           return obj;
       }
@@ -119,7 +119,7 @@
       }
 
       if (existeEscalera) {
-          obj["puntaje"] = 50;
+          obj["puntuacion"] = 50;
           obj["mano"] = "Escalera";
           return obj;
       }
@@ -135,7 +135,7 @@
       }
 
       if (trio) {
-          obj["puntaje"] = 40;
+          obj["puntuacion"] = 40;
           obj["mano"] = "Trio";
           return obj;
       }
@@ -154,7 +154,7 @@
       }
 
       if (doblePareja) {
-          obj["puntaje"] = 30;
+          obj["puntuacion"] = 30;
           obj["mano"] = "Doble pareja";
           return obj;
       }
@@ -172,13 +172,13 @@
       }
 
       if (pareja) {
-          obj["puntaje"] = 20;
+          obj["puntuacion"] = 20;
           obj["mano"] = "Pareja";
           return obj;
       }
 
       //Evaluación carta mas alta
-      obj["puntaje"] = letra_a_numero(jugador[4][0]);
+      obj["puntuacion"] = letra_a_numero(jugador[4][0]);
       obj["mano"] = "Carta mas alta";
       return obj;
   }
