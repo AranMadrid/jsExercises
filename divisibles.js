@@ -35,7 +35,7 @@ function divisibleNumbers(num) {
         result = recycleString(num);
 
         let numDer = num % 10;
-        let numIzq = Math.trunc(num / 10);
+        let numIzq = Math.trunc(num / 10); //float to int number
 
         result = result + auxString(numIzq);
         result = result + auxString(numDer);
@@ -45,7 +45,7 @@ function divisibleNumbers(num) {
 
 
     } else {
-        console.log("error: " + num + " is not between 1-100")
+        console.log("error: " + num + " is not between 1-100") //validator
     }
 
 }
